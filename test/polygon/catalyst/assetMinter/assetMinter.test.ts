@@ -1036,9 +1036,9 @@ describe('AssetMinter', function () {
       const assetMinterAsAdmin = await assetMinterContract.connect(
         ethers.provider.getSigner(assetMinterAdmin)
       );
-      await assetMinterAsAdmin.setMetaTransactionProcessor(users[9], 0);
+      await assetMinterAsAdmin.setMetaTransactionProcessor(users[6], 0);
       const assetMinterAsMetaTxProcessor = await assetMinterContract.connect(
-        ethers.provider.getSigner(users[9])
+        ethers.provider.getSigner(users[6])
       );
       await expect(
         assetMinterAsMetaTxProcessor.mint(
@@ -1064,11 +1064,11 @@ describe('AssetMinter', function () {
         ethers.provider.getSigner(assetMinterAdmin)
       );
       await assetMinterAsAdmin.setMetaTransactionProcessor(
-        users[9],
+        users[6],
         METATX_2771
       );
       const assetMinterAsMetaTxProcessor = await assetMinterContract.connect(
-        ethers.provider.getSigner(users[9])
+        ethers.provider.getSigner(users[6])
       );
       await expect(
         assetMinterAsMetaTxProcessor.mint(
